@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/styles/main.css">
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+
+    <div class="p-5 text-center bg-body-tertiary" id="jumbotron">
+        <div class="container py-5">
+          <h1 class="text-body-emphasis">Your Guide To Gripping Reads.</h1>
+          <p class="col-lg-8 mx-auto lead">
+            <br>
+           
+          </p>
+        </div>
+    </div>
+
+    <div class="userInputForm"> 
+        <% review.forEach( row => { %>
+        
+        <form action="/edit" method="POST" autocomplete="off">
+
+            <label for="titleEdit">Book Title</label>
+            <input type="text" id="titleEdit" name="titleEdit" maxlength="50" value="<%= row.title %>"><br><br>
+            <label for="authorEdit">Author</label>
+            <input type="text" id="authorEdit" name="authorEdit" maxlength="50" value="<%= row.author %>"><br><br>
+            <label for="reviewedByEdit">Who is writing this review?</label>
+            <input type="text" id="reviewedByEdit" name="reviewedByEdit" maxlength="50" value="<%= row.reviewed_by %>"><br><br>
+            <label for="ratingEdit">Rating</label>
+            <input type="text" id="ratingEdit" name="ratingEdit" maxlength="2" value="<%= row.rating %>"><br><br>
+            <label for="olidEdit">Open Library ID *</label>
+            <input type="text" id="olidEdit" name="olidEdit" maxlength="10" value="<%= row.olid %>"><br><br>
+            <label for="freeform">Write your review below:</label>
+            <br>
+            <textarea id="freeform" name="descriptionEdit" rows="10" cols="50" maxlength="3000" ><%= row.description %></textarea><br>
+            <button class="btn btn-primary rounded-pill px-3" type="submit">Post</button>
+        </form>
+        <% }) %>
+    </div>
+
+    <a href="https://openlibrary.org/" target="_blank"> <p class="openLibraryLink"> * The Open Library ID is used to display the cover picture of your chosen book. 
+        If you wish to add this feature, please visit the open library by clicking this text, then
+        find the correct ID for your review
+    </p></a>
+
+    <%- include("partials/footer.ejs") %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+/* basic styling */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+#jumbotron {
+    background-image: url(../assets/book-background.jpg);
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 80px;
+};
+
+
+
+li {
+    list-style-type: none;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+
+/* styling for the index.ejs page */
+.featuredPosts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.postContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    
+}
+
+.imageAndHeading {
+    display: flex;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    padding: 10px; 
+}
+
+.postContainer img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.reviewText {
+    flex-grow: 1;
+}
+
+.reviewTitle {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+h4, h5 {
+    color: #666;
+    margin: 5px 0;
+    
+}
+
+.description {
+    color: #444;
+    margin-top: 15px;
+    background-color: #f5f5f5;
+    padding: 20px; 
+    white-space: pre-line;
+}
+
+.buttonsContainer {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 75px;
+}
+
+.buttonsContainer form button {
+    margin-right: 10px;
+}
+
+/* styling for the user input form on edit.ejs and add.ejs */
+.userInputForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.openLibraryLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+/* styling for the password.ejs page */
+.password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#passwordInput {
+    margin-right: 20px;
+}
+
+
+/* styliing for the contact.ejs page */
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactItem {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contactText {
+    margin-left: 10px; 
+}
+
+
+
